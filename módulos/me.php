@@ -35,11 +35,11 @@ if(strpos($message, "/me") === 0 || strpos($message, "!me") === 0){
     }else{
         $messageidtoedit1 =   bot('sendmessage',[
           'chat_id'=>$chat_id,
-          'text'=>"≡ <b>User Info</b>
-- <ins>User ID:</ins> <code>$userId</code>
-- <ins>Full Name:</ins> ".htmlspecialchars($firstname.$lastname)."
-- <ins>User Name:</ins> @$username
-- <ins>User Type:</ins> <b>Free User</b>
+          'text'=>"≡ <b>User|•|Info</b> •
+- <ins>User ID:</ins> <code>$userId</code> •
+- <ins>Full Name:</ins> ".htmlspecialchars($firstname.$lastname)." •
+- <ins>User Name:</ins> @$username •
+- <ins>User Type:</ins> <b>Free User</b> •
 ━━━━━━━━━━━━━=
 <b>$date1 $time</b>",
           'parse_mode'=>'html',
@@ -63,7 +63,7 @@ if($data == "checkerstats"){
 - <ins>Total CVV Cards:</ins> ".$uStats['total_cvv']."
 - <ins>Total CCN Cards:</ins> ".$uStats['total_ccn']."
           
-≡ <b>Global Checker Stats</b>
+≡ <b>Global|•|Stats</b>
 
 - <ins>Total Cards Checked:</ins> ".$gStats['total_checked']."
 - <ins>Total CVV Cards:</ins> ".$gStats['total_cvv']."
@@ -82,12 +82,12 @@ if($data == "backme"){
   bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"≡ <b>User Info</b>
-- <ins>User ID:</ins> <code>$callbackuserid</code>
-- <ins>Full Name:</ins> ".htmlspecialchars($callbackfname.$callbacklname)."
-- <ins>User Name:</ins> @$callbackusername
-- <ins>User Type:</ins> <b>Free User</b>
-━━━━━━━━━━━━━=
+    'text'=>"≡ <b>User</b> •
+- <ins>User ID:</ins> <code>$callbackuserid</code> •
+- <ins>Name:</ins> ".htmlspecialchars($callbackfname.$callbacklname)." •
+- <ins>User-Name:</ins> @$callbackusername •
+- <ins>RANGE:</ins> <b>Free User</b> •
+<><><><><><><><><><><><><><><><><><><><>
 <b>$date1 $time</b>",
       'parse_mode'=>'html',
       'reply_to_message_id'=> $message_id,
