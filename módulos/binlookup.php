@@ -111,11 +111,11 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
                 bot('editMessageText',[
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
-              'text'=>"BIN/IIN: <code>$bin</code> $emoji
-Card Brand: <b><ins>$schemename</ins></b>
-Card Type: <b><ins>$typename</ins></b>
+              'text'=>"BIN: <code>$bin</code> $emoji
+Card Brand: <b><ins>$scheme</ins></b>
+Card Type: <b><ins>$type</ins></b>
 Card Level: <b><ins>$brand</ins></b>
-Bank Name: <b><ins>$bank</ins></b>
+Bank Name: <b><ins>$bank</ins></b> $emoji
 Country: <b><ins>$bname</ins> - 💲<ins>$currency</ins></b>
 Issuers Contact: <b><ins>$phone</ins></b>
 <b>━━━━━━━━━━━━━
