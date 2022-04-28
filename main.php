@@ -116,14 +116,14 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>━━Other Commands━━</b>
-  
+    'text'=>"<b>━━Extra Commands━━</b>
+  //////////////////////////////
 <b>/me | !me</b> - Your Info
-<b>/stats | !stats</b> - Checker Stats
-<b>/key | !key</b> - SK Key Checker
-<b>/bin | !bin</b> - Bin Lookup
+<b>/stats | !stats</b> - Stats
+<b>/key | !key</b> - Checker SK 
+<b>/bin | !bin</b> - Bin
 <b>/iban | !iban</b> - IBAN Checker
-  
+  //////////////////////////////
   <b>ϟ Join References <a href='t.me/BUCKSHAM'>BUCKSHAM</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
