@@ -32,4 +32,4 @@ if(strpos($message, "/myid") === 0 || strpos($message, "!me") === 0){
     }else{
         $messageidtoedit1 =   bot('sendmessage',[
           'chat_id'=>$chat_id,
-          'text'=>"≡- <ins>User ID:</ins> <code>$userId</code>"]
+          'text'=>"≡- <ins>User ID:</ins> <code>$userId</code>"])
