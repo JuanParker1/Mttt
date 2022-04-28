@@ -98,10 +98,10 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
 <b>/ss | !ss - Stripe Auth [ON🔥] </b>
 <b>/sm | !sm - Stripe Merchant [ON🔥]</b>
 <b>/schk | !schk - User Stripe Merchant [Needs SK| ON 🔥]</b>
-
+///////////////[OTHERS GATES]///////////////
 <b>/apikey sk_live_xxx - Add SK Key for /schk gate</b>
 <b>/myapikey | !myapikey - View the added SK Key for /schk gate</b>
-
+///////////////━━///////////////
 <b>ϟ Join References <a href='t.me/BUCKSHAM'>BUCKSHAM</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
