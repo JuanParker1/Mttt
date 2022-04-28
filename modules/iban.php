@@ -66,7 +66,8 @@ if(strpos($message, "/iban ") === 0){
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"IBAN -LIVE ✅ <code>$iban</code> - [ RESPONSE: <b>This is a valid IBAN.</b> ]
+                'text'=>"IBAN -LIVE ✅ <code>$iban</code> 
+RESPONSE: <b>This is a valid IBAN.</b> 
 <ins>BIC:</ins>  <code>$bic</code>
 <ins>Bank Code:</ins>  <code>$bankcode1</code>
 <ins>Bank:</ins>  <b>$bankname</b>
@@ -83,7 +84,8 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"IBAN -DEAD ❌ <code>$iban</code> - [ RESPONSE: <b>This is a Invalid IBAN.</b> ]
+                'text'=>"IBAN -DEAD ❌ <code>$iban</code> 
+RESPONSE: <b>This is a Invalid IBAN.</b> 
 <ins>Time:</ins>  <code>$timetaken</code><code>s</code>
 <b>━━━━━━━━━━</b>
 
