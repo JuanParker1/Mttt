@@ -66,7 +66,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
   if(!isBanned($userId) && !isMuted($userId)){
     bot('sendmessage',[
     'chat_id'=>$chat_id,
-    'text'=>"<b>Which commands would you like to check?</b>",
+    'text'=>"<b>Here are my commands. 🔥</b>",
     'parse_mode'=>'html',
     'reply_to_message_id'=> $message_id,
     'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -81,7 +81,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>Which commands would you like to check?</b>",
+    'text'=>"<b>Here are my commands. 🔥<</b>",
     'parse_mode'=>'html',
     'reply_markup'=>json_encode(['inline_keyboard'=>[
     [['text'=>"💳 CC Checker Gates",'callback_data'=>"checkergates"]],[['text'=>"🛠 Other Commands",'callback_data'=>"othercmds"]],
@@ -93,11 +93,11 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>━━CC Checker Gates━━</b>
+    'text'=>"<b>━━Gates━━</b>
   
-<b>/ss | !ss - Stripe [Auth]</b>
-<b>/sm | !sm - Stripe [Merchant]</b>
-<b>/schk | !schk - User Stripe Merchant [Needs SK]</b>
+<b>/ss | !ss - Stripe Auth [ON🔥] </b>
+<b>/sm | !sm - Stripe Merchant [ON🔥]</b>
+<b>/schk | !schk - User Stripe Merchant [Needs SK| ON 🔥]</b>
 
 <b>/apikey sk_live_xxx - Add SK Key for /schk gate</b>
 <b>/myapikey | !myapikey - View the added SK Key for /schk gate</b>
