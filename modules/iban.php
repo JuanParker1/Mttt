@@ -30,7 +30,7 @@ if(strpos($message, "/iban ") === 0){
     }else{
         $messageidtoedit1 = bot('sendmessage',[
           'chat_id'=>$chat_id,
-          'text'=>"<b>Wait for Result...</b>",
+          'text'=>"<b>Checking Iban, please wait...</b>",
           'parse_mode'=>'html',
           'reply_to_message_id'=> $message_id,
 
@@ -86,7 +86,7 @@ RESPONSE: <b>This is a Invalid IBAN.</b>
 <ins>Time:</ins>  <code>$timetaken</code><code>s</code>
 <b>━━━━━━━━━━</b>
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
