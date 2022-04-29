@@ -55,7 +55,7 @@ $messagesec",
         ],
        [
           ['text' => "CHANNEL ACC OFFICIAL", 'url' => "t.me/TReJtL4Vw6thNWQx"]
-        ],e
+        ],
       ], 'resize_keyboard' => true])
         
     ]);
