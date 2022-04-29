@@ -40,7 +40,7 @@ if(!isBanned($userId) && !isMuted($userId)){
     addUser($userId);
     bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"<b>Hello $name,
+        'text'=>"<b>Hello @$username
 
 I hope you enjoy my /cmds!</b>
 
@@ -99,10 +99,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
 <b>/ss | !ss - Stripe Auth [ON🔥] </b>
 <b>/sm | !sm - Stripe Merchant [ON🔥]</b>
 <b>/schk | !schk - User Stripe Merchant [Needs SK| ON 🔥]</b>
-///////////////[OTHERS GATES]///////////////
-<b>/apikey sk_live_xxx - Add SK Key for /schk gate</b>
-<b>/myapikey | !myapikey - View the added SK Key for /schk gate</b>
-///////////////━━///////////////
+///////////////[COMING SOON MORE GATES]///////////////
 <b>ϟ Join References <a href='t.me/BUCKSHAM'>BUCKSHAM</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
@@ -117,13 +114,15 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>━━Extra Commands━━</b>
+    'text'=>"<b>━━Other Commands━━</b>
   //////////////////////////////
 <b>/me | !me</b> - Your Info
 <b>/stats | !stats</b> - Stats
 <b>/key | !key</b> - Checker SK 
 <b>/bin | !bin</b> - Bin
 <b>/iban | !iban</b> - IBAN Checker
+<b>/apikey sk_live_xxx - Add SK Key for /schk gate</b>
+<b>/myapikey | !myapikey - View the added SK Key for /schk gate</b>
   //////////////////////////////
   <b>ϟ Join References <a href='t.me/BUCKSHAM'>BUCKSHAM</a></b>",
     'parse_mode'=>'html',
