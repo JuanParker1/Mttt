@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 include __DIR__."/../config/config.php";
 include_once __DIR__."/../functions/bot.php";
