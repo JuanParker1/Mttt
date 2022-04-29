@@ -51,10 +51,10 @@ $messagesec",
           ['text' => " Owner🤴 ", 'url' => "t.me/yhvga"]
         ],
         [
-          ['text' => "😱 REFERENCES TEAM😱", 'url' => "t.me/yhvga"]
+          ['text' => "😱 REPORT BUGS 😱", 'url' => "t.me/yhvga"]
         ],
        [
-          ['text' => "CHANNEL ACC OFFICIAL", 'url' => "t.me/+1M7phgJ76Dg0NGMx"]
+          ['text' => "CHANNEL ACC OFFICIAL", 'url' => "t.me/TReJtL4Vw6thNWQx"]
         ],e
       ], 'resize_keyboard' => true])
         
