@@ -83,11 +83,11 @@ Time -» <b>$time</b><b>s</b></b>
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"<b>SK Key:</b> <code>$skhidden</code>
-<b>Status -» Auth Fail ❌
-Response -» Provided Secret Key is Dead
-Time -» <b>$time</b><b>s</b></b>
-
+                'text'=>"<b>↱ SK Key:</b> <code>$skhidden</code>
+<b>↳Status -» Auth Fail ❌
+↳Response -» Provided Secret Key is Dead
+↳Time -» <b>$time</b><b>s</b></b>
+-----------------------------------
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
                 'parse_mode'=>'html',
