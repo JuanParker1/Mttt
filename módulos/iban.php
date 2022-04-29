@@ -103,7 +103,7 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 
 Provide a Valid SK KEYYYY!</b>",
             'parse_mode'=>'html',
-            'disable_web_page_preview'=>'true'
+                        'disable_web_page_preview'=>'true'
             
         ]);
 
@@ -113,6 +113,3 @@ Provide a Valid SK KEYYYY!</b>",
 
 
 ?>
-IBAN -DEAD ❌ <code>$iban</code> - [ RESPONSE: <b>This is a Invalid IBAN.</b> ]
-<ins>Time:</ins>  <code>$timetaken</code><code>s</code>
-<b>━━━━━━━━━━</b>DEAD
