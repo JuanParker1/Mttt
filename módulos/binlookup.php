@@ -117,7 +117,7 @@ Card Type: <b><ins>$type</ins></b>
 Card Level: <b><ins>$brand</ins></b>
 Bank Name: <b><ins>$bank</ins></b> $emoji
 Country: <b><ins>$bname</ins> - 💲<ins>$currency</ins></b>
-Issuers Contact: <b><ins>$phone</ins></b>
+Contact: <b><ins>$phone</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
