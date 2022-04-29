@@ -1,27 +1,27 @@
 {
-    "name": "SDMN Checker Bot",
-    "description": "A Telegram CC Checker Bot with hella lotta features.",
-    "logo": "https://pbs.twimg.com/profile_images/1252291883793027074/RfEhm8yV_400x400.jpg",
+    "name": "Josh Bot",
+    "description": "CHK BOT ON.",
+    "logo": "",
     "keywords": [
         "Telegram",
         "Bot",
         "Modular"
     ],
-    "website": "https://telegram.me/SDMN_CheckerBot",
-    "repository": "https://github.com/iam-NVN/SDMN_CheckerBot",
+    "website": "https://github.com/StormWixGOD/Mttt",
+    "repository": "https://github.com/StormWixGOD/Mttt",
     "env": {
         "BOT_TOKEN": {
-            "description": "Enter your Bot Token Here. Get it from @Botfather",
+            "description": "Enter your Bot Token.",
             "value": "",
             "required": true
         },
         "ADMIN_ID": {
-            "description": "Enter the User ID of Admin.",
+            "description": "id admin.",
             "value": "",
             "required": true
         },
         "LOGS_DUMP_ID": {
-            "description": "Enter the ID of a Group/Channel to store Logs",
+            "description": "ID CHANNEL Logs",
             "value": "",
             "required": true
         },
@@ -46,17 +46,17 @@
             "required": true
         },
         "ANTISPAM_TIMER": {
-            "description": "AntiSpam Timer Value in seconds",
+            "description": "AntiSpam Value in seconds",
             "value":"20",
             "required": true
         },
         "SK_KEYS": {
-            "description": "Enter SK Keys Here. Separate Multiple Keys with ,",
+            "description": "Enter SK Keys Here.",
             "value": "",
             "required": false
         },
         "TIMEZONE": {
-            "description": "Your Preffered TimeZone",
+            "description": "Your TimeZone",
             "value": "Asia/Kolkata",
             "required": false
         }
