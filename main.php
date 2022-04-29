@@ -54,7 +54,7 @@ $messagesec",
           ['text' => "😱 REPORT BUGS 😱", 'url' => "t.me/yhvga"]
         ],
        [
-          ['text' => "CHANNEL ACC OFFICIAL", 'url' => "t.me/TReJtL4Vw6thNWQx"]
+          ['text' => "CHANNEL ACC OFFICIAL", 'url' => "t.me/+TReJtL4Vw6thNWQx"]
         ],
       ], 'resize_keyboard' => true])
         
