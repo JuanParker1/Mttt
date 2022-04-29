@@ -51,8 +51,11 @@ $messagesec",
           ['text' => " Owner🤴 ", 'url' => "t.me/yhvga"]
         ],
         [
-          ['text' => "😱 REFERENCES TEAM😱", 'url' => "t.me/BUCKSHAM"]
+          ['text' => "😱 REFERENCES TEAM😱", 'url' => "t.me/yhvga"]
         ],
+       [
+          ['text' => "CHANNEL ACC OFFICIAL", 'url' => "t.me/+1M7phgJ76Dg0NGMx"]
+        ],e
       ], 'resize_keyboard' => true])
         
     ]);
@@ -93,13 +96,12 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>━━Gates━━</b>
-  
+    'text'=>"<b>━━━━Gates━━━━</b>
 <b>/ss | !ss - Stripe Auth [ON🔥] </b>
 <b>/sm | !sm - Stripe Merchant [ON🔥]</b>
 <b>/schk | !schk - User Stripe Merchant [Needs SK| ON 🔥]</b>
-///////////////[COMING SOON MORE GATES]///////////////
-<b>ϟ Join References <a href='t.me/BUCKSHAM'>BUCKSHAM</a></b>",
+///////////////////[COMING SOON MORE GATES]////////////////////
+<b>ϟ OWNER-BOT <a href='t.me/yhvga'>yhvga</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
     'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -113,8 +115,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>━━Other Commands━━</b>
-  //////////////////////////////
+    'text'=>"<b>━━━━Other Commands━━━━</b>
 <b>/me | !me</b> - Your Info
 <b>/stats | !stats</b> - Stats
 <b>/key | !key</b> - Checker SK 
@@ -123,7 +124,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
 <b>/apikey sk_live_xxx - Add SK Key for /schk gate</b>
 <b>/myapikey | !myapikey - View the added SK Key for /schk gate</b>
   //////////////////////////////
-  <b>ϟ Join References <a href='t.me/BUCKSHAM'>BUCKSHAM</a></b>",
+  <b>ϟ OWNER-BOT <a href='t.me/yhvga'>yhvga</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
     'reply_markup'=>json_encode(['inline_keyboard'=>[
