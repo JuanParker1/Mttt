@@ -1,11 +1,8 @@
 <?php
 
 /*
-
 ///==[IBAN Checker Commands]==///
-
 /iban de123 - Checks the IBAN
-
 */
 
 
@@ -67,12 +64,11 @@ if(strpos($message, "/iban ") === 0){
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
                 'text'=>"IBAN -LIVE ✅ <code>$iban</code> 
-RESPONSE: <b>This is a valid IBAN.</b>
+RESPONSE: <b>This is a valid IBAN.</b> 
 <ins>BIC:</ins>  <code>$bic</code>
 <ins>Bank Code:</ins>  <code>$bankcode1</code>
 <ins>Bank:</ins>  <b>$bankname</b>
 <ins>City:</ins>  <b>$city</b>
-<ins>Zip:</una>  <b>$zip</b>
 <ins>Time:</ins>  <code>$timetaken</code><code>s</code>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
@@ -83,13 +79,14 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
             ]);}
             else{
               bot('editMessageText',[
-                'chat_id'=>$chat_id
+                'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"IBAN -DEAD ❌ <code>$iban</code> - [ RESPONSE: <b>This is a Invalid IBAN.</b> ]
+                'text'=>"IBAN -DEAD ❌ <code>$iban</code> 
+RESPONSE: <b>This is a Invalid IBAN.</b> 
 <ins>Time:</ins>  <code>$timetaken</code><code>s</code>
 <b>━━━━━━━━━━</b>
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
+<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
@@ -98,12 +95,11 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
         }else{
           bot('editMessageText',[
             'chat_id'=>$chat_id,
-           'message_id'=>$messageidtoedit,
+            'message_id'=>$messageidtoedit,
             'text'=>"<b>Never Gonna Give you Up!
-
 Provide a Valid SK KEYYYY!</b>",
             'parse_mode'=>'html',
-                        'disable_web_page_preview'=>'true'
+            'disable_web_page_preview'=>'true'
             
         ]);
 
