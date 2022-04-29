@@ -98,7 +98,7 @@ Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
         }else{
           bot('editMessageText',[
             'chat_id'=>$chat_id,
-            'message_id'=>$messageidtoedit,
+           'message_id'=>$messageidtoedit,
             'text'=>"<b>Never Gonna Give you Up!
 
 Provide a Valid SK KEYYYY!</b>",
