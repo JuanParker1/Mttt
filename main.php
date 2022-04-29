@@ -18,7 +18,6 @@ include __DIR__."/modules/binlookup.php";
 include __DIR__."/modules/iban.php";
 include __DIR__."/modules/stats.php";
 include __DIR__."/modules/me.php";
-include __DIR__."/modules/myid.php";
 include __DIR__."/modules/apikey.php";
 
 
