@@ -40,7 +40,7 @@ if(!isBanned($userId) && !isMuted($userId)){
     addUser($userId);
     bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"<b>Hello @$username,
+        'text'=>"<b>Hello @name,
 
 I hope you enjoy my /cmds!</b>
 
