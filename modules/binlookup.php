@@ -116,7 +116,7 @@ Card Brand: <b><ins>$scheme</ins></b>
 Card Type: <b><ins>$type</ins></b>
 Card Level: <b><ins>$brand</ins></b>
 Bank Name: <b><ins>$bank</ins></b> $emoji
-Country: <b><ins>$bname</ins> - 💲<ins>$currency</ins></b>
+Country: <b><ins>$country</ins> - 💲<ins>$currency</ins></b>
 Contact: <b><ins>$phone</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
