@@ -17,8 +17,8 @@ include __DIR__."/modules/skcheck.php";
 include __DIR__."/modules/binlookup.php";
 include __DIR__."/modules/iban.php";
 include __DIR__."/modules/stats.php";
-include __DIR__."/../modules/me.php";
-include __DIR__."/../modules/apikey.php";
+include __DIR__."/modules/me.php";
+include __DIR__."/modules/apikey.php";
 
 
 include __DIR__."/modules/checker/ss.php";
