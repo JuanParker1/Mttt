@@ -71,23 +71,23 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             /////////////////////==========[Unavailable if empty]==========////////////////
             
             
-            if (empty($schemename)) {
-            	$schemename = "Unavailable";
-            }
-            if (empty($typename)) {
-            	$typename = "Unavailable";
+            if (empty($country)) {
+            	$country = "Unavailable";
             }
             if (empty($brand)) {
-            	$brand = "Unavailable";
+            	$brand= "Unavailable";
+            }
+            if (empty($level)) {
+            	$level = "Unavailable";
             }
             if (empty($bank)) {
             	$bank = "Unavailable";
             }
-            if (empty($bname)) {
-            	$bname = "Unavailable";
+            if (empty($flag)) {
+            	$flg = "Unavailable";
             }
-            if (empty($phone)) {
-            	$phone = "Unavailable";
+            if (empty($type)) {
+            	$type = "Unavailable";
             }
 
             ###END OF CHECKER PART###
@@ -106,13 +106,13 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
                 bot('editMessageText',[
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
-              'text'=>"BIN: <code>$bi</code> $emoji
+              'text'=>"BIN: <code>$bin</code> $emoji
 Card Brand: <b><ins>$ve</ins></b>
-Card Type: <b><ins>$ty</ins></b>
-Card Level: <b><ins>$le</ins></b>
+Card Type: <b><ins>$type</ins></b>
+Card Level: <b><ins>$level</ins></b>
 Bank Name: <b><ins>$ban</ins></b> $emoji
-Country: <b><ins>$co</ins> - 💲<ins>$currency</ins></b>
-Contact: <b><ins>$dial</ins></b>
+Country: <b><ins>$country $flag</ins> - 💲<ins>$currency</ins></b>
+[🔥SUSSEFULLY🔥]
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
