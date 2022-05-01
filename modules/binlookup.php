@@ -59,18 +59,14 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, '');
             $fim = curl_exec($ch);
-            $da = capture($fim, '"data":{"name":"', '"');
-            $bi = capture($fim, '"bin":"', '"');
-            $ve = capture($fim, '"vendor":"', '"');
-            $ty = capture($fim, '"type":{"name":"', '"');
-            $le = capture($fim, '"level":"', '"');
-            $ban = capture($fim, '"bank":"', '"');
-            $co = capture($fim, '"country":"', '"');
-            $cc = capture($fim, '"countryInfo":"', '"');
-            $nm = capture($fim, '"name":"', '"');
-            $em = capture($fim, '"emoji":"', '"');
-            $co = capture($fim, '"code":"', '"');      
-            $dial = capture($fim, '"dialCode":"', '"');      
+            $data = json_decode($result, true);
+            $bank = $data['data']['bank'];
+            $country = $data['data']['country'];
+            $brand = $data['data']['vendor'];
+            $level = $data['data']['level'];
+            $type = $data['data']['type'];
+            $flag = $data['data']['countryInfo']['emoji'];
+            $result1 = $data['result'];
 
             /////////////////////==========[Unavailable if empty]==========////////////////
             
