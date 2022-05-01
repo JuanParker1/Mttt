@@ -5,6 +5,7 @@ include_once __DIR__."/../functions/bot.php";
 
 function capture($string, $start, $end)
 {
+
   $str = explode($start, $string);
   $str = explode($end, $str[1]);
   return $str[0];
