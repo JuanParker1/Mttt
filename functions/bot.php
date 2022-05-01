@@ -52,4 +52,5 @@ function sendPhoto($chat_id,$photo,$keyboard){
 	'reply_markup'=>$keyboard]);
 }
 
+
 ?>
