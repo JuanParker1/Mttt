@@ -204,7 +204,7 @@ if(strpos($message, "/ss ") === 0 || strpos($message, "!ss ") === 0){
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
                 'text'=>"<b>Card:</b> <code>$lista</code>
-<b>Status -» CVV or CCN ✅
+<b>Status -» CVV MATCH or CCN ✅
 Response -» Approved
 Gateway -» Stripe Auth 1
 Time -» <b>$time</b><b>s</b>
@@ -216,7 +216,7 @@ Time -» <b>$time</b><b>s</b>
 <b>Currency -»</b> $currency
 <b>Country -»</b> $cname ($emoji - 💲$currency)
 <b>Issuers Contact -»</b> $phone
-<b>----------------------------</b>
+<b>•----------------------------•</b>
 
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
@@ -243,7 +243,7 @@ Time -» <b>$time</b><b>s</b>
 <b>Currency -»</b> $currency
 <b>Country -»</b> $cname ($emoji - 💲$currency)
 <b>Issuers Contact -»</b> $phone
-<b>----------------------------</b>
+<b>•----------------------------•</b>
 
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
@@ -270,7 +270,7 @@ Time -» <b>$time</b><b>s</b>
 <b>Currency -»</b> $currency
 <b>Country -»</b> $cname ($emoji - 💲$currency)
 <b>Issuers Contact -»</b> $phone
-<b>----------------------------</b>
+<b>•----------------------------•</b>
 
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
