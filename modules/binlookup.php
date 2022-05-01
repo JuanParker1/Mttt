@@ -110,8 +110,8 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
 Card Brand: <b><ins>$ve</ins></b>
 Card Type: <b><ins>$type</ins></b>
 Card Level: <b><ins>$level</ins></b>
-Bank Name: <b><ins>$ban</ins></b> $emoji
-Country: <b><ins>$country $flag</ins> - 💲<ins>$currency</ins></b>
+Bank Name: <b><ins>$ban</ins></b> 
+Country: <b><ins>$country $flag</ins>
 [🔥SUSSEFULLY🔥]
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
