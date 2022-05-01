@@ -67,7 +67,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
    ],
    ]);
 
- $result = curl_exec($curl);
+$result = curl_exec($curl);
  curl_close($curl);
  $data = json_decode($result, true);
  $bank = $data['data']['bank'];
@@ -77,28 +77,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
  $type = $data['data']['type'];
 $flag = $data['data']['countryInfo']['emoji'];
 
-            /////////////////////==========[Unavailable if empty]==========////////////////
-            
-            
-            if (empty($country)) {
-            	$country = "Unavailable";
-            }
-            if (empty($brand)) {
-            	$brand= "Unavailable";
-            }
-            if (empty($level)) {
-            	$level = "Unavailable";
-            }
-            if (empty($bank)) {
-            	$bank = "Unavailable";
-            }
-            if (empty($flag)) {
-            	$flg = "Unavailable";
-            }
-            if (empty($type)) {
-            	$type = "Unavailable";
-            }
-
+           
             ###END OF CHECKER PART###
             
             if(strlen($bin) < '6'){ 
