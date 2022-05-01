@@ -49,30 +49,29 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
 
             ###CHECKER PART###  
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, 'https://lookup.binlist.net/'.$bin.'');
+            curl_setopt($ch, CURLOPT_URL, 'https://bin-check-dr4g.herokuapp.com/api/'.$bin.'');
             curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Host: lookup.binlist.net',
+            'Host: bin-check-dr4g.herokuapp.com/api/',
             'Cookie: _ga=GA1.2.549903363.1545240628; _gid=GA1.2.82939664.1545240628',
             'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'));
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, '');
             $fim = curl_exec($ch);
-            $bank = capture($fim, '"bank":{"name":"', '"');
-            $bname = capture($fim, '"name":"', '"');
-            $brand = capture($fim, '"brand":"', '"');
-            $country = capture($fim, '"country":{"name":"', '"');
-            $phone = capture($fim, '"phone":"', '"');
-            $scheme = capture($fim, '"scheme":"', '"');
-            $type = capture($fim, '"type":"', '"');
-            $emoji = capture($fim, '"emoji":"', '"');
-            $currency = capture($fim, '"currency":"', '"');
-            $binlenth = strlen($bin);
-            $schemename = ucfirst("$scheme");
-            $typename = ucfirst("$type");
-            
-            
+            $da = capture($fim, '"data":{"name":"', '"');
+            $bi = capture($fim, '"bin":"', '"');
+            $ve = capture($fim, '"vendor":"', '"');
+            $ty = capture($fim, '"type":{"name":"', '"');
+            $le = capture($fim, '"level":"', '"');
+            $ban = capture($fim, '"bank":"', '"');
+            $co = capture($fim, '"country":"', '"');
+            $cc = capture($fim, '"countryInfo":"', '"');
+            $nm = capture($fim, '"name":"', '"');
+            $em = capture($fim, '"emoji":"', '"');
+            $co = capture($fim, '"code":"', '"');      
+            $dial = capture($fim, '"dialCode":"', '"');      
+
             /////////////////////==========[Unavailable if empty]==========////////////////
             
             
@@ -111,13 +110,13 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
                 bot('editMessageText',[
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
-              'text'=>"BIN: <code>$bin</code> $emoji
-Card Brand: <b><ins>$scheme</ins></b>
-Card Type: <b><ins>$type</ins></b>
-Card Level: <b><ins>$brand</ins></b>
-Bank Name: <b><ins>$bank</ins></b> $emoji
-Country: <b><ins>$country</ins> - 💲<ins>$currency</ins></b>
-Contact: <b><ins>$phone</ins></b>
+              'text'=>"BIN: <code>$bi</code> $emoji
+Card Brand: <b><ins>$ve</ins></b>
+Card Type: <b><ins>$ty</ins></b>
+Card Level: <b><ins>$le</ins></b>
+Bank Name: <b><ins>$ban</ins></b> $emoji
+Country: <b><ins>$co</ins> - 💲<ins>$currency</ins></b>
+Contact: <b><ins>$dial</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
