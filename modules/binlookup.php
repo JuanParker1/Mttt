@@ -72,29 +72,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             $schemename = ucfirst("$scheme");
             $typename = ucfirst("$type");
             
-            
-            /////////////////////==========[Unavailable if empty]==========////////////////
-            
-            
-            if (empty($schemename)) {
-            	$schemename = "Unavailable";
-            }
-            if (empty($typename)) {
-            	$typename = "Unavailable";
-            }
-            if (empty($brand)) {
-            	$brand = "Unavailable";
-            }
-            if (empty($bank)) {
-            	$bank = "Unavailable";
-            }
-            if (empty($bname)) {
-            	$bname = "Unavailable";
-            }
-            if (empty($phone)) {
-            	$phone = "Unavailable";
-            }
-
+           
             ###END OF CHECKER PART###
             
             if(strlen($bin) < '6'){ 
