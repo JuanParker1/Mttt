@@ -52,7 +52,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             curl_setopt($ch, CURLOPT_URL, 'https://lookup.binlist.net/'.$bin.'');
             curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Host: lookup.binlist.net',
+            'Host: lookup.binlist.net/',
             'Cookie: _ga=GA1.2.549903363.1545240628; _gid=GA1.2.82939664.1545240628',
             'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'));
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
@@ -111,7 +111,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
                 bot('editMessageText',[
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
-              'text'=>"BIN/IIN: <code>$bin</code> $emoji
+              'text'=>"BIN: <code>$bin</code> $emoji
 Card Brand: <b><ins>$schemename</ins></b>
 Card Type: <b><ins>$typename</ins></b>
 Card Level: <b><ins>$brand</ins></b>
@@ -120,7 +120,7 @@ Country: <b><ins>$bname</ins> - 💲<ins>$currency</ins></b>
 Issuers Contact: <b><ins>$phone</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
               'parse_mode'=>'html',
               'reply_to_message_id'=> $message_id,
               'disable_web_page_preview'=>'true']);}
