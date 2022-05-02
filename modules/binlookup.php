@@ -49,50 +49,48 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
 
             ###CHECKER PART###  
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, 'https://lookup.binlist.net/'.$bin.'');
+            curl_setopt($ch, CURLOPT_URL, 'https://binsu-api.vercel.app/api/'.$bin.'');
             curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Host: lookup.binlist.net',
+            'Host: binsu-api.vercel.app/api/',
             'Cookie: _ga=GA1.2.549903363.1545240628; _gid=GA1.2.82939664.1545240628',
             'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'));
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, '');
-            $fim = curl_exec($ch);
-            $bank = capture($fim, '"bank":{"name":"', '"');
-            $bname = capture($fim, '"name":"', '"');
-            $brand = capture($fim, '"brand":"', '"');
-            $alpha2 = capture($fim, '"alpha2":"', '"');
-            $phone = capture($fim, '"phone":"', '"');
-            $scheme = capture($fim, '"scheme":"', '"');
-            $type = capture($fim, '"type":"', '"');
-            $emoji = capture($fim, '"emoji":"', '"');
-            $currency = capture($fim, '"currency":"', '"');
-            $binlenth = strlen($bin);
-            $schemename = ucfirst("$scheme");
-            $typename = ucfirst("$type");
-            
+            $result = curl_exec($curl);
+            curl_close($curl);
+            $data = json_decode($result, true);
+            $bank = $data['data']['bank'];
+            $bin = $data['data']['bin'];
+             $country = $data['data']['country'];
+             $brand = $data['data']['vendor'];
+             $level = $data['data']['level'];
+             $type = $data['data']['type'];
+             $dial = $data['data']['dialCode'];
+             $flag = $data['data']['countryInfo']['emoji'];
+             $result1 = $data['result'];
             
             /////////////////////==========[Unavailable if empty]==========////////////////
             
             
-            if (empty($schemename)) {
-            	$schemename = "Unavailable";
+            if (empty($bank)) {
+            	$bank = "Unavailable";
             }
-            if (empty($typename)) {
-            	$typename = "Unavailable";
+            if (empty($country)) {
+            	$country = "Unavailable";
             }
             if (empty($brand)) {
             	$brand = "Unavailable";
             }
-            if (empty($bank)) {
-            	$bank = "Unavailable";
+            if (empty($type)) {
+            	$type = "Unavailable";
             }
-            if (empty($bname)) {
-            	$bname = "Unavailable";
+            if (empty($level)) {
+            	$level = "Unavailable";
             }
-            if (empty($phone)) {
-            	$phone = "Unavailable";
+            if (empty($flag)) {
+            	$flag = "Unavailable";
             }
 
             ###END OF CHECKER PART###
@@ -113,10 +111,10 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
               'message_id'=>$messageidtoedit,
               'text'=>" <b>↱VALID BIN ✅!
 ↳Bin: <code>$bin</code> 
-↳Brand: <ins>$scheme</ins>
+↳Brand: <ins>$brand</ins>
 ↳Type: <ins>$type</ins>
 ↳Bank: <ins>$bank</ins>
-↳Country: $emoji  -  💲<ins>$currency</ins>
+↳Country: <ins>$country</ins>
 ━━━━━━━━━━━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a>
 Bot By: <a href='t.me/yhvga'>yhvga</a> ↳•↲ </b> ",
