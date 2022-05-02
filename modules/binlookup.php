@@ -116,7 +116,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
 ↳Card Brand: <b><ins>$scheme</ins></b>
 ↳Card Type: <b><ins>$type</ins></b>
 ↳Bank Name: <b><ins>$bank</ins></b>
-↳Country: <b><ins>$emoji</ins>  -  💲<ins>$currency</ins></b>
+↳Country: $emoji  -  💲<ins>$currency</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b> ↳•↲ </b>",
