@@ -4,9 +4,8 @@
 include __DIR__."/config/config.php";
 include __DIR__."/config/variables.php";
 include __DIR__."/functions/bot.php";
-include __DIR__."/functions/functions.php";
 include __DIR__."/functions/db.php";
-
+include __DIR__."/functions/functions.php";
 
 date_default_timezone_set($config['timeZone']);
 
