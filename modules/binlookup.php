@@ -113,9 +113,9 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
               'message_id'=>$messageidtoedit,
               'text'=>" <b>↱VALID BIN ✅!
 ↳BIN: <code>$bin</code> 
-↳Card Brand: <ins>$scheme</ins>
-↳Card Type: <ins>$type</ins>
-↳Bank Name: <ins>$bank</ins>
+↳Brand: <ins>$scheme</ins>
+↳Type: <ins>$type</ins>
+↳Name: <ins>$bank</ins>
 ↳Country: $emoji  -  💲<ins>$currency</ins>
 ━━━━━━━━━━━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a>
