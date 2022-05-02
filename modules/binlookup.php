@@ -59,7 +59,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, '');
             $fim = curl_exec($ch);
-            $bank = capture($fim, '"bank":{"name":"', '"');
+            $level = $data['data']['level'];
             $bname = capture($fim, '"name":"', '"');
             $brand = capture($fim, '"brand":"', '"');
             $country = capture($fim, '"country":{"name":"', '"');
@@ -90,12 +90,11 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
               'text'=>"BIN: <code>$bin</code> $emoji
-Card Brand: <b><ins>$schemename</ins></b>
-Card Type: <b><ins>$typename</ins></b>
+Card Brand: <b><ins>$scheme</ins></b>
+Card Type: <b><ins>$type</ins></b>
 Card Level: <b><ins>$brand</ins></b>
-Bank Name: <b><ins>$bank</ins></b>
-Country: <b><ins>$bname</ins> - 💲<ins>$currency</ins></b>
-Issuers Contact: <b><ins>$phone</ins></b>
+Bank Name: <b><ins>$bname</ins></b>
+Country: <b><ins>$name</ins> - 💲<ins>$currency</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
