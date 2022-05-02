@@ -54,56 +54,7 @@ if(strpos($message, "/sm ") === 0 || strpos($message, "!sm ") === 0){
             $sec = $sk[0];
 
             file_put_contents('sk.txt',$sk);
-    
-            ###CHECKER PART###  
-            
-            $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, 'https://lookup.binlist.net/'.$cc.'');
-            curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Host: lookup.binlist.net',
-            'Cookie: _ga=GA1.2.549903363.1545240628; _gid=GA1.2.82939664.1545240628',
-            'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'));
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, '');
-            $fim = curl_exec($ch);
-            $bank = capture($fim, '"bank":{"name":"', '"');
-            $cname = capture($fim, '"name":"', '"');
-            $brand = capture($fim, '"brand":"', '"');
-            $country = capture($fim, '"country":{"name":"', '"');
-            $phone = capture($fim, '"phone":"', '"');
-            $scheme = capture($fim, '"scheme":"', '"');
-            $type = capture($fim, '"type":"', '"');
-            $emoji = capture($fim, '"emoji":"', '"');
-            $currency = capture($fim, '"currency":"', '"');
-            $binlenth = strlen($bin);
-            $schemename = ucfirst("$scheme");
-            $typename = ucfirst("$type");
-            
-            
-            /////////////////////==========[Unavailable if empty]==========////////////////
-            
-            
-            if (empty($schemename)) {
-            	$schemename = "Unavailable";
-            }
-            if (empty($typename)) {
-            	$typename = "Unavailable";
-            }
-            if (empty($brand)) {
-            	$brand = "Unavailable";
-            }
-            if (empty($bank)) {
-            	$bank = "Unavailable";
-            }
-            if (empty($cname)) {
-            	$cname = "Unavailable";
-            }
-            if (empty($phone)) {
-            	$phone = "Unavailable";
-            }
-
+   
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/sources');
             curl_setopt($curl, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
@@ -130,18 +81,9 @@ if(strpos($message, "/sm ") === 0 || strpos($message, "!sm ") === 0){
 Response -» <code>$stripemessage</code>
 Gateway -» Stripe Auth 1
 Time -» <b>$time</b><b>s</b>
-
-------- Bin Info -------</b>
-<b>Bank -»</b> $bank
-<b>Brand -»</b> $schemename
-<b>Type -»</b> $typename
-<b>Currency -»</b> $currency
-<b>Country -»</b> $cname ($emoji - 💲$currency)
-<b>Issuers Contact -»</b> $phone
 <b>----------------------------</b>
-
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
                     'parse_mode'=>'html',
                     'disable_web_page_preview'=>'true'
                     
@@ -201,18 +143,9 @@ Time -» <b>$time</b><b>s</b>
 Response -» $stripemessage
 Gateway -» User Stripe Merchant
 Time -» <b>$time</b><b>s</b>
-
-------- Bin Info -------</b>
-<b>Bank -»</b> $bank
-<b>Brand -»</b> $schemename
-<b>Type -»</b> $typename
-<b>Currency -»</b> $currency
-<b>Country -»</b> $cname ($emoji - 💲$currency)
-<b>Issuers Contact -»</b> $phone
 <b>----------------------------</b>
-
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
@@ -230,18 +163,9 @@ Time -» <b>$time</b><b>s</b>
 Response -» <code>$stripemessage</code>
 Gateway -» Stripe Auth 1
 Time -» <b>$time</b><b>s</b>
-
-------- Bin Info -------</b>
-<b>Bank -»</b> $bank
-<b>Brand -»</b> $schemename
-<b>Type -»</b> $typename
-<b>Currency -»</b> $currency
-<b>Country -»</b> $cname ($emoji - 💲$currency)
-<b>Issuers Contact -»</b> $phone
 <b>----------------------------</b>
-
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/ninjanaveen'>ɴɪɴᴊᴀ ɴᴀᴠᴇᴇɴ</a></b>",
+<b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
                 
