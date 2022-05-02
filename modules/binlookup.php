@@ -111,12 +111,12 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
                 bot('editMessageText',[
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
-              'text'=>"BIN: <code>$bin</code> $emoji
+              'text'=>"VALID BIN ✅!
+BIN: <code>$bin</code> $emoji
 Card Brand: <b><ins>$scheme</ins></b>
 Card Type: <b><ins>$type</ins></b>
-Card Level: <b><ins>$brand</ins></b>
 Bank Name: <b><ins>$bank</ins></b>
-Country: <b><ins>$name</ins> - 💲<ins>$currency</ins></b>
+Country: <b><ins>$country</ins> - 💲<ins>$currency</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
