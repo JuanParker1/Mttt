@@ -112,10 +112,10 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
               'text'=>" <b>↱VALID BIN ✅!
-↳BIN: <code>$bin</code> 
+↳Bin: <code>$bin</code> 
 ↳Brand: <ins>$scheme</ins>
 ↳Type: <ins>$type</ins>
-↳Name: <ins>$bank</ins>
+↳Bank: <ins>$bank</ins>
 ↳Country: $emoji  -  💲<ins>$currency</ins>
 ━━━━━━━━━━━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a>
