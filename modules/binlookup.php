@@ -62,7 +62,7 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
             $bank = capture($fim, '"bank":{"name":"', '"');
             $bname = capture($fim, '"name":"', '"');
             $brand = capture($fim, '"brand":"', '"');
-            $alpha2 = capture($fim, '"alpha2":"', '"');
+            $country = capture($fim, '"country":{"name":"', '"');
             $phone = capture($fim, '"phone":"', '"');
             $scheme = capture($fim, '"scheme":"', '"');
             $type = capture($fim, '"type":"', '"');
