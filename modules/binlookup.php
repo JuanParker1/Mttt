@@ -96,6 +96,7 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
             }
             if (empty($phone)) {
             	$phone = "Unavailable/No Registered";
+            }
             
             ###END OF CHECKER PART###
             
