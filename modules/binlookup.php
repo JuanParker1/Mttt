@@ -78,7 +78,7 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
             
             if (empty($schemename)) {
             	$schemename = "Unavailable/No Registered";
-      
+            }
             if (empty($typename)) {
             	$typename = "Unavailable/No Registered";
   
