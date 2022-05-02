@@ -52,7 +52,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             curl_setopt($ch, CURLOPT_URL, 'https://lookup.binlist.net/'.$bin.'');
             curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Host: lookup.binlist.net/',
+            'Host: lookup.binlist.net',
             'Cookie: _ga=GA1.2.549903363.1545240628; _gid=GA1.2.82939664.1545240628',
             'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'));
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
@@ -72,7 +72,29 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             $schemename = ucfirst("$scheme");
             $typename = ucfirst("$type");
             
-           
+            
+            /////////////////////==========[Unavailable if empty]==========////////////////
+            
+            
+            if (empty($schemename)) {
+            	$schemename = "Unavailable";
+            }
+            if (empty($typename)) {
+            	$typename = "Unavailable";
+            }
+            if (empty($brand)) {
+            	$brand = "Unavailable";
+            }
+            if (empty($bank)) {
+            	$bank = "Unavailable";
+            }
+            if (empty($bname)) {
+            	$bname = "Unavailable";
+            }
+            if (empty($phone)) {
+            	$phone = "Unavailable";
+            }
+
             ###END OF CHECKER PART###
             
             if(strlen($bin) < '6'){ 
