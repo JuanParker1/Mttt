@@ -62,7 +62,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             $bank = capture($fim, '"bank":{"name":"', '"');
             $bname = capture($fim, '"name":"', '"');
             $brand = capture($fim, '"brand":"', '"');
-            $country = capture($fim, '"country":{"name":"', '"');
+            $alpha2 = capture($fim, '"alpha2":"', '"');
             $phone = capture($fim, '"phone":"', '"');
             $scheme = capture($fim, '"scheme":"', '"');
             $type = capture($fim, '"type":"', '"');
@@ -116,7 +116,8 @@ BIN: <code>$bin</code> $emoji
 Card Brand: <b><ins>$scheme</ins></b>
 Card Type: <b><ins>$type</ins></b>
 Bank Name: <b><ins>$bank</ins></b>
-Country: <b><ins>$country</ins> - 💲<ins>$currency</ins></b>
+Country: <b><ins>$alpha2</ins> - 💲<ins>$currency</ins></b>
+                 
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
