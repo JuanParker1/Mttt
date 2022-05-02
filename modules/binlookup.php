@@ -59,7 +59,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, '');
             $fim = curl_exec($ch);
-            $level = $data['data']['level'];
+            $bank = capture($fim, '"bank":{"name":"', '"');
             $bname = capture($fim, '"name":"', '"');
             $brand = capture($fim, '"brand":"', '"');
             $country = capture($fim, '"country":{"name":"', '"');
@@ -93,7 +93,7 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
 Card Brand: <b><ins>$scheme</ins></b>
 Card Type: <b><ins>$type</ins></b>
 Card Level: <b><ins>$brand</ins></b>
-Bank Name: <b><ins>$bname</ins></b>
+Bank Name: <b><ins>$bank</ins></b>
 Country: <b><ins>$name</ins> - 💲<ins>$currency</ins></b>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
