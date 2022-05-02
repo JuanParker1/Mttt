@@ -62,7 +62,7 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
             $bank = capture($fim, '"bank":{"name":"', '"');
             $bname = capture($fim, '"name":"', '"');
             $brand = capture($fim, '"brand":"', '"');
-            $country = capture($fim, '"country":{"name":"', '"');
+            $alpha2 = capture($fim, '"alpha2":"', '"');
             $phone = capture($fim, '"phone":"', '"');
             $scheme = capture($fim, '"scheme":"', '"');
             $type = capture($fim, '"type":"', '"');
@@ -116,6 +116,7 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
               'message_id'=>$messageidtoedit,
               'text'=>" <b>↱VALID BIN ✅!
 ↳Bin: <code>$bin</code> 
+↳Brand: <ins>$brand</ins>
 ↳Brand: <ins>$scheme</ins>
 ↳Type: <ins>$type</ins>
 ↳Bank: <ins>$bank</ins>
