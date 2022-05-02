@@ -111,15 +111,15 @@ if(strpos($message, "/bin ") === 0 || strpos($message, "!bin ") === 0){
                 bot('editMessageText',[
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
-              'text'=>"<b>↱VALID BIN ✅!
+              'text'=>" <b>↱VALID BIN ✅!
 ↳BIN: <code>$bin</code> 
-↳Card Brand: <b><ins>$scheme</ins></b>
-↳Card Type: <b><ins>$type</ins></b>
-↳Bank Name: <b><ins>$bank</ins></b>
-↳Country: $emoji  -  💲<ins>$currency</ins></b>
-<b>━━━━━━━━━━━━━
-Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
-<b>Bot By: <a href='t.me/yhvga'>yhvga</a></b> ↳•↲ </b>",
+↳Card Brand: <ins>$scheme</ins>
+↳Card Type: <ins>$type</ins>
+↳Bank Name: <ins>$bank</ins>
+↳Country: $emoji  -  💲<ins>$currency</ins>
+━━━━━━━━━━━━━━━━━━━━━━━
+Checked By <a href='tg://user?id=$userId'>$firstname</a>
+Bot By: <a href='t.me/yhvga'>yhvga</a> ↳•↲ </b> ",
               'parse_mode'=>'html',
               'reply_to_message_id'=> $message_id,
               'disable_web_page_preview'=>'true']);}
