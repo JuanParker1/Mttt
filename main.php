@@ -21,10 +21,9 @@ include __DIR__."/modules/me.php";
 include __DIR__."/modules/apikey.php";
 
 
-include __DIR__."/modules/checker/ss.php";
 include __DIR__."/modules/checker/schk.php";
 include __DIR__."/modules/checker/sm.php";
-
+include __DIR__."/modules/checker/ss.php";
 
 
 //////////////===[START]===//////////////
