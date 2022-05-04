@@ -139,7 +139,7 @@ Bot By: <a href='t.me/yhvga'>yhvga</a> ↳•↲ </b> ",
             'chat_id'=>$chat_id,
             'message_id'=>$messageidtoedit,
             'text'=>"<b>¡Never Gonna Give you Up!
-❌¡Provide a Bin!❌</b>",
+❌¡¡Provide a Bin!!❌</b>",
             'parse_mode'=>'html',
             'disable_web_page_preview'=>'true'
             
