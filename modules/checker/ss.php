@@ -61,11 +61,11 @@ if(strpos($message, "/ss ") === 0 || strpos($message, "!ss ") === 0){
             $last = substr(md5(mt_rand()), 0, 7);
         
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, 'https://m.stripe.com/6');
+            curl_setopt($ch, CURLOPT_URL, 'https://api.stripe.com/v1/payment_intents/');
             curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
             curl_setopt($ch, CURLOPT_HEADER, 0);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Host: m.stripe.com',
+            'Host: api.stripe.com',
             'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
             'Accept: */*',
             'Accept-Language: en-US,en;q=0.5',
@@ -206,7 +206,6 @@ if(strpos($message, "/ss ") === 0 || strpos($message, "!ss ") === 0){
 Response -» Approved
 Gateway -» Stripe Auth 1
 Time -» <b>$time</b><b>s</b>
-
 ------- Bin Info -------</b>
 <b>Bank -»</b> $bank
 <b>Brand -»</b> $schemename
@@ -215,7 +214,6 @@ Time -» <b>$time</b><b>s</b>
 <b>Country -»</b> $cname ($emoji - 💲$currency)
 <b>Issuers Contact -»</b> $phone
 <b>----------------------------</b>
-
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
                 'parse_mode'=>'html',
@@ -233,7 +231,6 @@ Time -» <b>$time</b><b>s</b>
 Response -» Unknown
 Gateway -» Stripe Auth 1
 Time -» <b>$time</b><b>s</b>
-
 ------- Bin Info -------</b>
 <b>Bank -»</b> $bank
 <b>Brand -»</b> $schemename
@@ -242,7 +239,6 @@ Time -» <b>$time</b><b>s</b>
 <b>Country -»</b> $cname ($emoji - 💲$currency)
 <b>Issuers Contact -»</b> $phone
 <b>----------------------------</b>
-
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
                 'parse_mode'=>'html',
@@ -260,7 +256,6 @@ Time -» <b>$time</b><b>s</b>
 Response -» $errormessage
 Gateway -» Stripe Auth 1
 Time -» <b>$time</b><b>s</b>
-
 ------- Bin Info -------</b>
 <b>Bank -»</b> $bank
 <b>Brand -»</b> $schemename
@@ -269,7 +264,6 @@ Time -» <b>$time</b><b>s</b>
 <b>Country -»</b> $cname ($emoji - 💲$currency)
 <b>Issuers Contact -»</b> $phone
 <b>----------------------------</b>
-
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
                 'parse_mode'=>'html',
