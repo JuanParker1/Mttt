@@ -21,10 +21,10 @@ if(strpos($message, "/ss ") === 0 || strpos($message, "!ss ") === 0){
     $antispam = antispamCheck($userId);
     addUser($userId);
     
-    if($antispam != False){
+    if($antispam != True){
       bot('sendmessage',[
         'chat_id'=>$chat_id,
-        'text'=>"[<u>ANTI SPAM</u>] Try again after <b>$antispam</b>s.",
+        'text'=>"[<u>⚠️ ANTI SPAM ⚠️</u>] Try again after <b>$antispam</b>s.",
         'parse_mode'=>'html',
         'reply_to_message_id'=> $message_id
       ]);
