@@ -15,7 +15,6 @@ include __DIR__."/../functions/bot.php";
 include __DIR__."/../functions/db.php";
 include __DIR__."/../functions/functions.php";
 
-
 ////////////====[MUTE]====////////////
 if(strpos($message, "/sm ") === 0 || strpos($message, "!sm ") === 0){   
     $antispam = antispamCheck($userId);
@@ -61,7 +60,13 @@ if(strpos($message, "/sm ") === 0 || strpos($message, "!sm ") === 0){
             curl_setopt($ch, CURLOPT_HEADER, 0);
             curl_setopt($ch, CURLOPT_USERPWD, $sec. ':' . '');
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'content-type: application/x-www-form-urlencoded',));
+            'Host: api.stripe.com',
+            'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
+            'Accept: */*',
+            'Accept-Language: en-US,en;q=0.5',
+            'Content-Type: text/plain;charset=UTF-8',
+            'Origin: https://m.stripe.network',
+            'Referer: https://m.stripe.network/inner.html'));
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
@@ -100,7 +105,13 @@ Time -» <b>$time</b><b>s</b>
             curl_setopt($ch, CURLOPT_HEADER, 0);
             curl_setopt($ch, CURLOPT_USERPWD, $sec. ':' . '');
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'content-type: application/x-www-form-urlencoded',));
+            'Host: api.stripe.com',
+            'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36',
+            'Accept: */*',
+            'Accept-Language: en-US,en;q=0.5',
+            'Content-Type: text/plain;charset=UTF-8',
+            'Origin: https://m.stripe.network',
+            'Referer: https://m.stripe.network/inner.html'));
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
