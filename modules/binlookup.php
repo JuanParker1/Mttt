@@ -111,11 +111,11 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
               'text'=>" <b>↱VALID BIN ✅!
-<b>Bank -»</b> $bank
-<b>Brand -»</b> $schemename
-<b>Type -»</b> $typename
-<b>Country -»</b> $cname $emoji • 💲$currency
-<b>Issuers Contact -»</b> $phone
+<b>↳ Bank -»</b> $bank
+<b>↳ Brand -»</b> $schemename
+<b>↳ Type -»</b> $typename
+<b>↳ Country -»</b> $cname $emoji • 💲$currency
+<b>↳ Contact -»</b> $phone
 ━━━━━━━━━━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a>
 Bot By: <a href='t.me/yhvga'>yhvga</a> ↳•↲ </b> ",
