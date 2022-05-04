@@ -52,7 +52,7 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
             curl_setopt($ch, CURLOPT_URL, 'https://lookup.binlist.net/'.$bin.'');
             curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'Host: lookup.binlist.net/',
+            'Host: lookup.binlist.net',
             'Cookie: _ga=GA1.2.549903363.1545240628; _gid=GA1.2.82939664.1545240628',
             'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'));
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
@@ -60,9 +60,9 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
             curl_setopt($ch, CURLOPT_POSTFIELDS, '');
             $fim = curl_exec($ch);
             $bank = capture($fim, '"bank":{"name":"', '"');
-            $bname = capture($fim, '"name":"', '"');
+            $cname = capture($fim, '"name":"', '"');
             $brand = capture($fim, '"brand":"', '"');
-            $alpha2 = capture($fim, '"alpha2":"', '"');
+            $country = capture($fim, '"country":{"name":"', '"');
             $phone = capture($fim, '"phone":"', '"');
             $scheme = capture($fim, '"scheme":"', '"');
             $type = capture($fim, '"type":"', '"');
@@ -71,31 +71,27 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
             $binlenth = strlen($bin);
             $schemename = ucfirst("$scheme");
             $typename = ucfirst("$type");
-
             
             /////////////////////==========[Unavailable if empty]==========////////////////
             
             
             if (empty($schemename)) {
-            	$schemename = "Unavailable/No Registered";
+            	$schemename = "Unavailable";
             }
             if (empty($typename)) {
-            	$typename = "Unavailable/No Registered";
-  
+            	$typename = "Unavailable";
             }
             if (empty($brand)) {
-            	$brand = "Unavailable/No Registered";
+            	$brand = "Unavailable";
             }
-            
-            if (empty($type)) {
-            	$type = "Unavailable/No Registered";
+            if (empty($bank)) {
+            	$bank = "Unavailable";
             }
-            if (empty($bname)) {
-            	$bname = "Unavailable/No Registered";
-           
+            if (empty($cname)) {
+            	$cname = "Unavailable";
             }
             if (empty($phone)) {
-            	$phone = "Unavailable/No Registered";
+            	$phone = "Unavailable";
             }
             
             ###END OF CHECKER PART###
@@ -115,12 +111,12 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
               'text'=>" <b>↱VALID BIN ✅!
-↳Bin: <code>$bin</code> 
-↳Brand: <ins>$brand</ins>
-↳Brand: <ins>$scheme</ins>
-↳Type: <ins>$type</ins>
-↳Bank: <ins>$bank</ins>
-↳Country: $emoji  -  💲<ins>$currency</ins>
+<b>Bank -»</b> $bank
+<b>Brand -»</b> $schemename
+<b>Type -»</b> $typename
+<b>Currency -»</b> $currency
+<b>Country -»</b> $cname ($emoji - 💲$currency)
+<b>Issuers Contact -»</b> $phone
 ━━━━━━━━━━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a>
 Bot By: <a href='t.me/yhvga'>yhvga</a> ↳•↲ </b> ",
