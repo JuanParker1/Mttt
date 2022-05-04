@@ -114,8 +114,7 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
 <b>Bank -»</b> $bank
 <b>Brand -»</b> $schemename
 <b>Type -»</b> $typename
-<b>Currency -»</b> $currency
-<b>Country -»</b> $cname ($emoji - 💲$currency)
+<b>Country -»</b> $cname $emoji • 💲$currency
 <b>Issuers Contact -»</b> $phone
 ━━━━━━━━━━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a>
