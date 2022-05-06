@@ -94,10 +94,10 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>━━━━Gates━━━━</b>
-<b>/ss | !ss - Stripe Auth [ON🔥] </b>
-<b>/sm | !sm - Stripe Merchant [ON🔥]</b>
-<b>/schk | !schk - User Stripe Merchant [Needs SK| ON 🔥]</b>
+    'text'=>"<b>━━━━[GATES]━━━━</b>
+<b>/ss | Stripe Auth [ON🔥] </b>
+<b>/sm | Stripe Merchant [OFF :(]</b>
+<b>/schk | User Stripe Merchant [Needs SK| OFF :(]</b>
 ///////////////////[COMING SOON MORE GATES]////////////////////
 <b>ϟ OWNER-BOT <a href='t.me/yhvga'>yhvga</a></b>",
     'parse_mode'=>'html',
@@ -121,7 +121,7 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
 <b>/iban | !iban</b> - IBAN Checker
 <b>/apikey sk_live_xxx - Add SK Key for /schk gate</b>
 <b>/myapikey | !myapikey - View the added SK Key for /schk gate</b>
-  //////////////////////////////
+  ━━━━━━━━━━━━━━━━━━━━━━
   <b>ϟ OWNER-BOT <a href='t.me/yhvga'>yhvga</a></b>",
     'parse_mode'=>'html',
     'disable_web_page_preview'=>true,
