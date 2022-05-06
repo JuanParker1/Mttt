@@ -110,7 +110,8 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
                 bot('editMessageText',[
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
-              'text'=>" <b>↱VALID BIN ✅!
+              'text'=>" <b>卍        ⤌° • BIN • °⤍        卍
+↱VALID BIN ✅
 <b>↳ Bank -»</b> $bank
 <b>↳ Brand -»</b> $schemename
 <b>↳ Type -»</b> $typename
@@ -127,7 +128,7 @@ Bot By: <a href='t.me/yhvga'>yhvga</a> ↳•↲ </b> ",
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"<b>❌ INVALID BIN ❌</b>
+                'text'=>"<b>❌BIN IS INVALID OR NOT FOUND IN DB ❌</b>
 <b>Checked By <a href='tg://user?id=$userId'>$firstname</a></b>",
                 'parse_mode'=>'html',
                 'disable_web_page_preview'=>'true'
@@ -138,8 +139,7 @@ Bot By: <a href='t.me/yhvga'>yhvga</a> ↳•↲ </b> ",
           bot('editMessageText',[
             'chat_id'=>$chat_id,
             'message_id'=>$messageidtoedit,
-            'text'=>"<b>¡Never Gonna Give you Up!
-❌¡¡Provide a Bin!!❌</b>",
+            'text'=>"<b>❌¡¡Provide a Bin!!❌</b>",
             'parse_mode'=>'html',
             'disable_web_page_preview'=>'true'
             
