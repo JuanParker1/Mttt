@@ -226,8 +226,7 @@ Time -» <b>$time</b><b>s</b>
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"<b>Card:</b> <code>$lista</code>
-<b>Status -» API Down ❌
+                'text'=>"<b>Status -» API Down ❌
 Response -» Unknown
 Gateway -» Stripe Auth 1
 Time -» <b>$time</b><b>s</b>
