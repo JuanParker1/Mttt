@@ -57,17 +57,17 @@ if($data == "checkerstats"){
         bot('editMessageText',[
           'chat_id'=>$callbackchatid,
           'message_id'=>$callbackmessageid,
-          'text'=>"≡ <b>User Stats</b>
+          'text'=>" <b>User Stats</b>
           
-- <ins>Total Cards Checked:</ins> ".$uStats['total_checked']."
-- <ins>Total CVV Cards:</ins> ".$uStats['total_cvv']."
-- <ins>Total CCN Cards:</ins> ".$uStats['total_ccn']."
+- <ins>Total Cards:</ins> ".$uStats['total_checked']."
+- <ins>Total CVV:</ins> ".$uStats['total_cvv']."
+- <ins>Total CCN:</ins> ".$uStats['total_ccn']."
           
-≡ <b>Global Checker Stats</b>
+<b>Global Stats</b>
 
-- <ins>Total Cards Checked:</ins> ".$gStats['total_checked']."
-- <ins>Total CVV Cards:</ins> ".$gStats['total_cvv']."
-- <ins>Total CCN Cards:</ins> ".$gStats['total_ccn']."",
+- <ins>G Total Cards:</ins> ".$gStats['total_checked']."
+- <ins>G Total CVV:</ins> ".$gStats['total_cvv']."
+- <ins>G Total CCN:</ins> ".$gStats['total_ccn']."",
           'parse_mode'=>'html',
           'reply_to_message_id'=> $message_id,
           'reply_markup'=>json_encode(['inline_keyboard'=>[
@@ -86,7 +86,7 @@ if($data == "backme"){
 - <ins>User ID:</ins> <code>$callbackuserid</code>
 - <ins>Full Name:</ins> ".htmlspecialchars($callbackfname.$callbacklname)."
 - <ins>User Name:</ins> @$callbackusername
-- <ins>User Type:</ins> <b>Free User</b>
+- <ins>TYPE USER:</ins> <b>Free User</b>
 ━━━━━━━━━━━━━=
 <b>$date1 $time</b>",
       'parse_mode'=>'html',
