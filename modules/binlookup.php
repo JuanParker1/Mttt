@@ -112,11 +112,11 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
               'message_id'=>$messageidtoedit,
               'text'=>" <b>卍        ⤌° • BIN • °⤍        卍
 ↱VALID BIN ✅
-<b>↳ Bank -»</b> $bank
-<b>↳ Brand -»</b> $schemename
-<b>↳ Type -»</b> $typename
-<b>↳ Country -»</b> $cname $emoji • 💲$currency
-<b>↳ Contact -»</b> $phone
+<b><a href='t.me/yhvga'>[✗]</a> Bank -»</b> $bank
+<b><a href='t.me/yhvga'>[✗]</a> Brand -»</b> $schemename
+<b><a href='t.me/yhvga'>[✗]</a> Type -»</b> $typename
+<b><a href='t.me/yhvga'>[✗]</a> Country -»</b> $cname $emoji • 💲$currency
+<b><a href='t.me/yhvga'>[✗]</a> Contact -»</b> $phone
 ━━━━━━━━━━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a>
 Bot By: <a href='t.me/yhvga'>yhvga</a> ↳•↲ </b> ",
