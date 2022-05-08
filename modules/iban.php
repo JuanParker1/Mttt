@@ -63,13 +63,14 @@ if(strpos($message, "/iban ") === 0){
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"IBAN -LIVE ✅ <code>$iban</code> 
+                'text'=>"
+<a href='t.me/yhvga'>[✗]</a> IBAN -LIVE ✅ <code>$iban</code> 
 RESPONSE: <b>This is a valid IBAN.</b> 
-<ins>BIC:</ins>  <code>$bic</code>
-<ins>Bank Code:</ins>  <code>$bankcode1</code>
-<ins>Bank:</ins>  <b>$bankname</b>
-<ins>City:</ins>  <b>$city</b>
-<ins>Time:</ins>  <code>$timetaken</code><code>s</code>
+<a href='t.me/yhvga'>[✗]</a> <ins>BIC:</ins>  <code>$bic</code>
+<a href='t.me/yhvga'>[✗]</a> <ins>Bank Code:</ins>  <code>$bankcode1</code>
+<a href='t.me/yhvga'>[✗]</a> <ins>Bank:</ins>  <b>$bankname</b>
+<a href='t.me/yhvga'>[✗]</a> <ins>City:</ins>  <b>$city</b>
+<a href='t.me/yhvga'>[✗]</a> <ins>Time:</ins>  <code>$timetaken</code><code>s</code>
 <b>━━━━━━━━━━━━━
 Checked By <a href='tg://user?id=$userId'>$firstname</a></b>
 <b>Bot By: <a href='t.me/yhvga'>yhvga</a></b>",
