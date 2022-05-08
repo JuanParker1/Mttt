@@ -65,7 +65,7 @@ if(strpos($message, "/iban ") === 0){
                 'message_id'=>$messageidtoedit,
                 'text'=>"卍        ⤌° • IBAN • °⤍        卍
 <a href='t.me/yhvga'>[✗]</a> IBAN -LIVE ✅ <code>$iban</code> 
-RESPONSE: <b>This is a valid IBAN.</b> 
+<a href='t.me/yhvga'>[✗]</a> RESPONSE: <b>This is a valid IBAN 🌟</b> 
 <a href='t.me/yhvga'>[✗]</a> <ins>BIC:</ins>  <code>$bic</code>
 <a href='t.me/yhvga'>[✗]</a> <ins>Bank Code:</ins>  <code>$bankcode1</code>
 <a href='t.me/yhvga'>[✗]</a> <ins>Bank:</ins>  <b>$bankname</b>
