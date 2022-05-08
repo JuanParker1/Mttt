@@ -11,14 +11,14 @@ $conn = mysqli_connect($config['db']['hostname'],$config['db']['username'],$conf
 if(!$conn){
     bot('sendmessage',[
         'chat_id'=>$config['adminID'],
-        'text'=>"<b>🛑 DB connection Failed!
+        'text'=>"<b>⚠️ [NEW LOG] DB connection Failed!
         
         ".json_encode($config['db'])."</b>",
         'parse_mode'=>'html'
         
     ]);
 
-    logsummary("<b>🛑 DB connection Failed!\n\n".json_encode($config['db'])."</b>");
+    logsummary("<b>⚠️ [NEW LOG] DB connection Failed!\n\n".json_encode($config['db'])."</b>");
 }
 
 ////////////////////////////////////////////
@@ -68,7 +68,7 @@ function isMuted($userID){
         if($muted_for >= 0){
         bot('sendmessage',[
             'chat_id'=>$chat_id,
-            'text'=>"<b>🛑You are Muted!
+            'text'=>"<b>⚠️ You are Muted! 🖕
             
 Try Again after <code>".date("F j, Y, g:i a",$userData['mute_timer'])."</code></b>",
         'parse_mode'=>'html',
@@ -91,7 +91,7 @@ function addUser($userID){
 
     if(!$userData){
         $addtodb = mysqli_query($conn,"INSERT INTO users (userid,registered_on,is_banned,is_muted,mute_timer,sk_key,total_checked,total_cvv,total_ccn) VALUES ('$userID','".time()."','False','False','0','0','0','0','0')");
-        logsummary("<b>🛑 [LOG] New User - $userID</b>");
+        logsummary("<b>🌟 [REGISTER LOG] New User - $userID</b>");
         return True;
     }else{
         return False;
@@ -107,7 +107,7 @@ function muteUser($userID,$time){
         return "Uhmm, This user isn't in my db!";
     }else{
         $muteuser = mysqli_query($conn,"UPDATE users SET is_muted = 'True',mute_timer = '$time' WHERE userid = '$userID'");
-        logsummary("<b>🛑 [LOG] Muted $userID</b>");
+        logsummary("<b>🌟 [REGISTER LOG] Muted $userID</b>");
         return "Successfully Muted <code>$userID</code> until <code>".date("F j, Y, g:i a",$time)."</code>";
     }
 
@@ -121,7 +121,7 @@ function unmuteUser($userID){
         return "Uhmm, This user isn't in my db!";
     }else{
         $muteuser = mysqli_query($conn,"UPDATE users SET is_muted = 'False',mute_timer = '0' WHERE userid = '$userID'");
-        logsummary("<b>🛑 [LOG] Unmuted $userID</b>");
+        logsummary("<b>🌟 [REGISTER LOG] Unmuted $userID</b>");
         return "Successfully Unmuted $userID";
     }
 
@@ -135,7 +135,7 @@ function banUser($userID){
         return "Uhmm, This user isn't in my db!";
     }else{
         $muteuser = mysqli_query($conn,"UPDATE users SET is_banned = 'True' WHERE userid = '$userID'");
-        logsummary("<b>🛑 [LOG] Banned $userID</b>");
+        logsummary("<b>⚠️ [REGISTER LOG] Banned $userID</b>");
         return "Successfully Banned <code>$userID</code>";
     }
 
@@ -150,7 +150,7 @@ function unbanUser($userID){
     }else{
         $muteuser = mysqli_query($conn,"UPDATE users SET is_banned = 'False' WHERE userid = '$userID'");
         
-        logsummary("<b>🛑 [LOG] Unbanned $userID</b>");
+        logsummary("<b>🌟 [REGISTER LOG] Unbanned $userID</b>");
 
         return "Successfully Unbanned <code>$userID</code>";
 
