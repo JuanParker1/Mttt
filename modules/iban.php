@@ -63,7 +63,7 @@ if(strpos($message, "/iban ") === 0){
               bot('editMessageText',[
                 'chat_id'=>$chat_id,
                 'message_id'=>$messageidtoedit,
-                'text'=>"
+                'text'=>"卍        ⤌° • IBAN • °⤍        卍
 <a href='t.me/yhvga'>[✗]</a> IBAN -LIVE ✅ <code>$iban</code> 
 RESPONSE: <b>This is a valid IBAN.</b> 
 <a href='t.me/yhvga'>[✗]</a> <ins>BIC:</ins>  <code>$bic</code>
