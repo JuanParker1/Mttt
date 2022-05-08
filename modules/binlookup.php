@@ -111,7 +111,7 @@ if(strpos($message, "/Bin ") === 0 || strpos($message, "!Bin ") === 0){
               'chat_id'=>$chat_id,
               'message_id'=>$messageidtoedit,
               'text'=>" <b>卍        ⤌° • BIN • °⤍        卍
-↱VALID BIN ✅
+<a href='t.me/yhvga'>[✗]</a> VALID BIN ✅
 <b><a href='t.me/yhvga'>[✗]</a> Bank -»</b> $bank
 <b><a href='t.me/yhvga'>[✗]</a> Brand -»</b> $schemename
 <b><a href='t.me/yhvga'>[✗]</a> Type -»</b> $typename
