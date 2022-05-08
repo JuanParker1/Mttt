@@ -40,13 +40,13 @@ if(strpos($message, "/mute ") === 0 and $userId == $config['adminID']){
     $args = explode("|", substr($message, 6));
     $userID = $args[0];
     $timer = $args[1];
-
+    $timerunix = $args[2];
 
     if(stripos($timer,'m')){
-      $timer = add_minutes(time(),$timer);
+      $timerunix = add_minutes(time(),$timer);
     }
     elseif(stripos($timer,'d')){
-      $timer = add_days(time(),$timer);
+      $timerunix = add_days(time(),$timer);
     }
     else{
       bot('sendmessage',[
