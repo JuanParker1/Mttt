@@ -49,7 +49,12 @@ if(strpos($message, "/ss ") === 0 || strpos($message, "!ss ") === 0){
             $mes = multiexplode(array(":", "|", "/", " "), $creditcard)[1];
             $ano = multiexplode(array(":", "|", "/", " "), $creditcard)[2];
             $cvv = multiexplode(array(":", "|", "/", " "), $creditcard)[3];
-        
+            $sk = $config['sk_keys'];
+            shuffle($sk);
+            $sec = $sk[0];
+
+            file_put_contents('sk.txt',$sk);
+
 
             ###CHECKER PART###  
             $zip = rand(10001,90045);
